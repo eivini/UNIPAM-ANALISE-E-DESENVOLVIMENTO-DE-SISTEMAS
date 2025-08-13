@@ -7,6 +7,7 @@ public class Main {
         int tentativasMetodo = 0;
         final int MAX_TENTATIVAS = 3;
 
+        // Tentar método de pagamento até 3 vezes
         while (tentativasMetodo < MAX_TENTATIVAS) {
             System.out.println("Escolha o método de pagamento (paypal, boleto, pix):");
             String metodo = scanner.nextLine().toLowerCase();
@@ -29,7 +30,7 @@ public class Main {
                     continue;
             }
 
-            break;
+            break; // Sai do loop se encontrou um método válido
         }
 
         if (factory == null) {
@@ -41,6 +42,7 @@ public class Main {
         double valor = -1;
         int tentativasValor = 0;
 
+        // Tentar obter um valor válido até 3 vezes
         while (tentativasValor < MAX_TENTATIVAS) {
             System.out.print("Digite o valor do pagamento: R$");
             String entrada = scanner.nextLine();
